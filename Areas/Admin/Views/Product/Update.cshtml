@@ -1,0 +1,40 @@
+@using MyProject.Models
+@model Product
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Add product</h4>
+                <p class="card-description">
+                    Basic form elements
+                </p>
+                <form class="forms-sample" asp-action="Create" asp-controller="Product" asp-area="Admin" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="Photo">Image</label>
+                        <input asp-for="Photo" class="form-control" placeholder="Photo">
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input asp-for="Title" class="form-control" placeholder="Title">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <label for="exampleInputName1">Price</label>
+                        <input asp-for="Price" class="form-control" placeholder="Price">
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <label for="exampleInputName1">Description</label>
+                        <textarea asp-for="Description" class="form-control" placeholder="Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
